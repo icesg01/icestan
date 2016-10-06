@@ -8,7 +8,7 @@ public class firstTen {
 		Scanner keyboard = new Scanner(System.in);
 		double[] newArray = new double[11];
 		System.out.println("the first ten divided by the 11th is " + populateArray(newArray,keyboard));
-		
+		System.out.println("test 2");
 		System.out.println("hi");
 		
 	}
