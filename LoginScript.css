@@ -1,0 +1,52 @@
+body{
+	background: rgb(53,106,160); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(53,106,160,1) 0%, rgba(53,106,160,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(53,106,160,1) 0%,rgba(53,106,160,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(53,106,160,1) 0%,rgba(53,106,160,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+img{
+	text-align:center;
+display:block;
+margin:auto;
+}
+table
+
+input:focus, input:hover {
+				background-color: #ffffff;
+				border: 1px solid rgb(53,106,160);}
+input[type=text],
+input[type=password]
+{
+	border: 1px solid #bdbdbd;
+	border-radius: 5px;
+	display: block;
+	margin-bottom: 10px;
+	width: 287px;
+}
+input[type=submit]
+{
+	background: rgb(53,106,160); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(53,106,160,1) 0%, rgba(53,106,160,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(53,106,160,1) 0%,rgba(53,106,160,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(53,106,160,1) 0%,rgba(53,106,160,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	color: white;
+					border: 1px solid #bdbdbd;
+				border-radius: 5px;
+	width: 80px;
+	height: 30px;
+	font-family: "Courier New", Courier, monospace;
+
+}
+strong,
+td#username,
+td#password
+{
+	font-family: "Courier New", Courier, monospace;
+	color: rgb(53,106,160);
+	font-weight: bold;
+	padding-bottom: 0px;
+}
+strong{
+	font-size: large;
+}

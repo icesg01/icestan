@@ -20,7 +20,13 @@ document.createElement('nav');
 	
 	body,html{
 	margin:0;
-	background:#9B9B9C;
+
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#356aa0+0,356aa0+100;Blue+Flat */
+background: rgb(53,106,160); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(53,106,160,1) 0%, rgba(53,106,160,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(53,106,160,1) 0%,rgba(53,106,160,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(53,106,160,1) 0%,rgba(53,106,160,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#356aa0', endColorstr='#356aa0',GradientType=0 ); /* IE6-9 */
 	position:relative;
 	height:100%;
 	}
@@ -41,15 +47,25 @@ width:100%;
 	}
 
 
-#container:before{
+#logoArea{
 
-content:" ";
+margin:20px 0px 20px 0px;
 display:block;
 float:left;
 clear:both;
 width:100%;
-height:25%;
+text-align:center;
 
+height:25%;
+min-height:300px;
+}
+
+#logoArea img{
+	
+	margin:0 auto;
+	-webkit-box-shadow: 12px 12px 12px rgba(0, 0, 0, .3);
+	-moz-box-shadow: 12px 12px 12px rgba(0, 0, 0, .3);
+	box-shadow: 12px 12px 12px rgba(0, 0, 0, .3);
 }
 	
 	.child{
@@ -188,6 +204,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 	
 	}
 	
+	#logoArea{
+		
+		margin-top:0;
+	}
+	
+	#logoArea img{
+		
+		width:100%;
+		height:300px;
+		
+	}
+	
 	.navItem{
 	
 	height:50px;
@@ -219,11 +247,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 	
 	.child{
 	height:40%;
-	width:70%;
+	width:100%;
 	float:none;
 	margin-left:auto;
 	margin-right:auto;
-
+margin-bottom:20px;
+border-radius:0px;
 	
 	
 	
@@ -251,6 +280,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 </head>
 
 <body>
+	
+	<div id="logoArea"><img src="ipfw.jpg" /></div>
 	
 	<div id="container">
 	
