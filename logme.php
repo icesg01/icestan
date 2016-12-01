@@ -6,17 +6,17 @@
 		<title>CS 372 HW 5</title>
 	
 		<link rel="stylesheet" href="LoginScript.css">
-		
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1", user-scalable=0/>
 	</head>
 
 	<body>
-		<img src="ipfw.jpg" style="text-align: center" />
+		<img src="http://home.advanced-online.com/images/IPF1a.jpg" style="text-align: center" />
 		<div id="centerpage" >
-			<table width="300" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+			<table id="mainTable" border="0" align="center" cellpadding="0" cellspacing="1" >
 				<tr>
 					<form name="form1" method="post" action="login.php">
 					<td>
-						<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
+						<table id="subTable"  border="0" cellpadding="3" cellspacing="1" >
 						<tr>
 							<td colspan="3" style="text-align: center"><strong>Member Login </strong></td>
 						</tr>
