@@ -1,3 +1,17 @@
+<?php
+session_start();
+$sessionName = $_SESSION['username'];
+
+$teamColor = $_SESSION['teamColor'];
+if(!isset($_SESSION['username'])){
+	
+	header('Location: http://www.sullens.net/~sice/cins257/ProjectTest/logme.php');
+	
+	
+}
+
+
+?>
 <!DOCTYPE html>
 
 
@@ -10,6 +24,7 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1", user-scalable=0/>
 		<script src="timeSlot.js"></script>
+		<script src="checkTime.js"></script>
 		
 		<script>
 			document.createElement('section');
@@ -18,10 +33,10 @@
 	
 </head>
 
-<body>
+<body onload="checkTime(0);">
 	
 	<div id = "picture">
-	<image src = "IPFWlogo.jpg" 
+	<image src = "https://s-media-cache-ak0.pinimg.com/originals/1c/e7/71/1ce77139b73ccc7574e6d86763f0d0d5.jpg" 
 	style="height:250px;"></image>
 	</div>
 	
@@ -72,7 +87,7 @@
 		while($x < 11 ){
 			
 			
-			if(x % 6 == 0){
+		
 	
 	
 		echo 	"<section class=\"navItem\">{$times[$timeSlot]}</section> ";
@@ -81,19 +96,19 @@
 		
 				
 				
-			}
 			
 			
+			$pickTime = $times[$timeSlot - 1];
 			
 			
 			
 			
 			echo "<form action=\"\">";
-			echo "<section class=\"navItem\"   id=\"Monday{$x}\"   name=\"week {$x} Monday \" style=\"text-align:center;\"><input  onclick=\"secureTime('Monday','{$x}')\" type=\"checkbox\" /></section>";
-			echo "<section class=\"navItem\" name=\"week {$x} Tuesday \" style=\"text-align:center;\"><input type=\"checkbox\" /></section>";
-			echo "<section class=\"navItem\" name=\"week {$x} Wednesday \" style=\"text-align:center;\"><input type=\"checkbox\" /></section>";
-			echo "<section class=\"navItem\" name=\"week {$x} Thursday \" style=\"text-align:center;\"><input type=\"checkbox\" /></section>";
-			echo "<section class=\"navItem\" name=\"week {$x} Friday \" style=\"text-align:center;\"><input type=\"checkbox\" /></section>";
+			echo "<section class=\"navItem\"   id=\"Monday{$x}\" name=\"week {$x} Monday \" style=\"text-align:center;\"><input   onclick=\"secureTime('Monday','{$x}','{$teamColor}','{$sessionName}','{$pickTime}')\" type=\"checkbox\" /></section>";
+			echo "<section class=\"navItem\"  id=\"Tuesday{$x}\" name=\"week {$x} Tuesday \" style=\"text-align:center;\"><input onclick=\"secureTime('Tuesday','{$x}','{$teamColor}','{$sessionName}','{$pickTime}')\" type=\"checkbox\" /></section>";
+			echo "<section class=\"navItem\" id=\"Wednesday{$x}\" name=\"week {$x} Wednesday \" style=\"text-align:center;\"><input onclick=\"secureTime('Wednesday','{$x}','{$teamColor}','{$sessionName}','{$pickTime}')\" type=\"checkbox\" /></section>";
+			echo "<section class=\"navItem\" id=\"Thursday{$x}\" name=\"week {$x} Thursday \" style=\"text-align:center;\"><input onclick=\"secureTime('Thursday','{$x}','{$teamColor}','{$sessionName}','{$pickTime}')\" type=\"checkbox\" /></section>";
+			echo "<section class=\"navItem\" id=\"Friday{$x}\" name=\"week {$x} Friday \" style=\"text-align:center;\"><input onclick=\"secureTime('Friday','{$x}','{$teamColor}','{$sessionName}','{$pickTime}')\" type=\"checkbox\" /></section>";
 		
 			echo "</form>";
 			
