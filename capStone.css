@@ -1,0 +1,188 @@
+Sbody,html{
+	margin:0;
+	position:relative;
+	height:100%;
+	}
+	#container{
+	height:100%;
+	float:left;
+width:100%;
+
+	
+	
+	}
+	
+	.child > ul{
+		
+		font-size:2.5em;
+		
+	}
+	
+	#container:after{
+	content:" ";
+	display:block;
+	clear:both;
+	
+	}
+
+
+#container:before{
+
+content:" ";
+display:block;
+float:left;
+clear:both;
+width:100%;
+height:25%;
+
+}
+	
+	.child{
+	background:#fff;
+	
+	float:left;
+	margin-bottom:10%;
+/* -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc; */
+  
+  border-radius:16px;
+  border:3px solid #003FA5;
+	height:50%;
+	width:20%;
+	border:1px solid #000;
+	
+	}
+	
+	.child2{
+	min-height:50%;
+	float:left;
+	
+	margin-left:5%;
+	background:#fff;
+	width:calc(70% - 2px);
+	width:68%;
+	  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
+	
+	
+	
+	
+	}
+	
+	
+	.child2 > nav{
+	
+	
+	width:100%;
+	
+	font-size:20px;
+	
+	font-weight:bold;
+	
+	
+	
+	
+	
+	}
+	
+	.child2:after{
+	content:" ";
+	display:block;
+	clear:both;
+	
+	
+	}
+	
+	
+	
+	.navItem{
+	
+
+background: #eeeeee; /* Old browsers */
+background: -moz-linear-gradient(top,  #eeeeee 0%, #cccccc 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #eeeeee 0%,#cccccc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+
+	
+	height:50px;
+	
+	float:left;
+
+
+	width:12%;
+	width:calc(12.5% - 2px);
+	position:relative;
+	border:1px solid #000;
+		
+	}
+	
+	.navItem:hover{
+	
+	
+	
+	}
+
+
+	
+	input{
+	
+	text-align:center;
+	
+	position:relative;
+	
+	top:20%;
+	
+	
+	
+	
+	
+	}
+	
+	@media only screen and (max-width: 800px) {
+	
+	#container{
+	font-size:0.5em;
+	
+	}
+	
+	.navItem{
+	
+	height:50px;
+	
+	}
+	
+	.child2 > nav{
+	word-wrap:break-word;
+	font-size:2.2em;
+	line-height:20px;
+	
+	}
+	
+	#container:before{
+	
+	height:10%;
+	
+	}
+	
+	.child{
+	height:40%;
+	width:100%;
+	
+	
+	
+	}
+	
+	.child2{
+	width:100%;
+	height:100%;
+	margin:0;
+	font-size:0.5em;
+	
+	}
+	
+	
+	
+	}
