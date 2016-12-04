@@ -46,23 +46,18 @@ while($row = $job->fetch(PDO::FETCH_BOTH)){
 $salt = "$1$";
 $end = "$";
 $encryptionmethod = $salt . $row['salt'] . $end;
-if(!$_SESSION['username']){
-if(crypt($memberpass,$encryptionmethod) == $row['password'] && $row['approved'] == 1){
-
-
-
-
+if(!isset($_SESSION['username'])){
+if(crypt($memberpass,$encryptionmethod) == $row['password']){
 
 $hash = crypt($memberpass,$encryptionmethod);
 
 $_SESSION['username'] = $row['username'];
-$_SESSION['postcount'] = $row['postcount'];
-$_SESSION['img'] = $row['img'];
+$_SESSION['teamColor'] = $row['teamColor'];
 
-header('Location: http://www.sullens.net/~sice/PHP5/cs_372_project.php');
+redirect('http://www.sullens.net/~sice/cins257/ProjectTest/cs_372_project.php');
 }
 else{
-echo "wrong!";}
+redirect('http://www.sullens.net/~sice/cins257/ProjectTest/logme.php');}
 }
 else{
 echo "you are already logged in";
@@ -70,6 +65,13 @@ session_destroy();
 }
 }
 
+redirect('http://www.sullens.net/~sice/cins257/ProjectTest/logme.php');
+
+
+function redirect($page){
+	header('Location: ' . $page);
+	exit;
+}
 
 
 ?>
