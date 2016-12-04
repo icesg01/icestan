@@ -1,8 +1,11 @@
-function secureTime(whichone,week){
+function secureTime(whichone,timeRow,color,teamName,timeSlot){
 	var ajaxRequest;  // The variable that makes Ajax possible!
-	var whichone;
-	var week;
-	var derp;
+	var whichone; // the day of the week associated with the cell
+	var timeRow; // the row associated with the given cell 
+	var responseDiv; // the element to add the resposne too 
+	var timeSlot;
+	var color; // the color of the team who is logged in
+	var teamName; // the name of the team that is logged in
 	try{
 		// Opera 8.0+, Firefox, Safari
 		ajaxRequest = new XMLHttpRequest();
@@ -28,63 +31,54 @@ function secureTime(whichone,week){
 	
 	var id;
 		
-		switch(whichone){
-			case "Monday":
+		 responseDiv = document.getElementById(whichone + timeRow);
 			
+		id = whichone + timeRow;	
 			
-			 derp = document.getElementById(whichone + week);
+	
+		
+	
+		ajaxRequest.onreadystatechange = function(){
 			
+			if(ajaxRequest.readyState == 4){
 			
-			
-			break;
-			
-			case "Tuesday":
-			
-			break;
-			
-			case "Wednesday":
-			
-			break;
-			
-			case "Thursday":
-			
-			break;
-			
-			case "Friday":
-			
-			break;
-			
-			case "Saturday":
-			
-			break;
-			
-			case "Sunday":
-			
-			break;
-
-			default:
-			
-			
+				HandleResponse(ajaxRequest.responseText,responseDiv);
+			}
 			
 			
 		}
-	
-	
 		
-		
-		
+		var parameters = "?username=" + teamName + "&teamColor=" + color + "&id=" + id + "&timeSlot=" +  timeSlot;
 
 	
 	
-		
-	derp.innerHTML = "you clicked me!"
+		alert(id);
+	
 
 	
 		
 
-	//ajaxRequest.open("GET","ajax-select-query.php" + queryString, true);
+	ajaxRequest.open("GET","timeManipulation.php" + parameters, true);
 	ajaxRequest.send(null);
 	
 	
 	
+}
+
+function HandleResponse(response,responseDiv)
+
+
+{
+
+if(response == "taken"){
+	alert("time slot already selected");
+	
+}else{
+
+
+ responseDiv.innerHTML = response;
+}
+
+
+
 }
