@@ -4,7 +4,7 @@
 	"Thursday0", "Thursday1", "Thursday2", "Thursday3", "Thursday4", "Thursday5", "Thursday6", "Thursday7", "Thursday8", "Thursday9", "Thursday10",
 	"Friday0", "Friday1", "Friday2", "Friday3", "Friday4", "Friday5", "Friday6", "Friday7", "Friday8", "Friday9", "Friday10"];
 
-function checkTime(index){
+function checkTime(index, username){
 
 	if(index == days.length){
 		return;
@@ -45,15 +45,15 @@ function checkTime(index){
 		ajaxRequest.onreadystatechange = function(){
 			
 			if(ajaxRequest.readyState == 4){
-			
-				HandleResponse(ajaxRequest.responseText,responseDiv);
-				checkTime(index += 1);
+				
+				HandleResponsee(ajaxRequest.responseText,responseDiv);
+				checkTime(index += 1,username);
 			}
 			
 			
 		}
 		
-		var parameters = "?id=" + id;
+		var parameters = "?id=" + id + "&username=" + username;
 		
 
 	ajaxRequest.open("GET","checkTimes.php" + parameters, true);
@@ -62,19 +62,15 @@ function checkTime(index){
 }
 
 
-function HandleResponse(response,responseDiv)
+function HandleResponsee(response,responseDiv)
 
 
 {
-
 if(response == ""){
-	
-}else{
 
-
+}
+else{
  responseDiv.innerHTML = response;
 }
-
-
 
 }
