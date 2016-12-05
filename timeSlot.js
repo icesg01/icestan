@@ -42,7 +42,7 @@ function secureTime(whichone,timeRow,color,teamName,timeSlot){
 			
 			if(ajaxRequest.readyState == 4){
 			
-				HandleResponse(ajaxRequest.responseText,responseDiv);
+				HandleResponseee(ajaxRequest.responseText,responseDiv);
 			}
 			
 			
@@ -52,7 +52,7 @@ function secureTime(whichone,timeRow,color,teamName,timeSlot){
 
 	
 	
-		alert(id);
+
 	
 
 	
@@ -65,13 +65,13 @@ function secureTime(whichone,timeRow,color,teamName,timeSlot){
 	
 }
 
-function HandleResponse(response,responseDiv)
+function HandleResponseee(response,responseDiv)
 
 
 {
 
 if(response == "taken"){
-	alert("time slot already selected");
+
 	
 }else{
 
