@@ -10,6 +10,7 @@ $password = "7904063";
 
 
 $teamName = $_GET['username'];
+$text = $_GET['text'];
 $teamColor = $_GET['teamColor'];
 $id = $_GET['id'];
 $timeSlot = $_GET['timeSlot'];
@@ -37,9 +38,15 @@ $job->execute(array($id));
 
 $results = $job->fetch(PDO::FETCH_ASSOC);
 
+if($results['name'] == $_SESSION['username']) 
+{ 
+
+    $addBOx = "<img  style=\" margin-top:10%;\" src=\"xButton.jpg\" />  ";
+} 
+
+$displayString .= "<h2 style=\" color:{$results['color']}; margin:0; padding:0; float:left; margin-top:5%; \" > {$results['name']}</h2>{$addBOx}";
 
 
-$displayString .= "<h2 style=\" color:{$results['color']}; margin:0; padding:0 \" > {$results['name']}</h2>";
 
 }
 
