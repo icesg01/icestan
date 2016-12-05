@@ -6,11 +6,31 @@ body{
 }
 
 img{
+	
 	text-align:center;
-display:block;
-margin:auto;
+	display:block;
+	width:30%;
+	min-width:300px;
+	margin:auto;
 }
-table
+	
+#mainTable{
+	width:30%;
+	min-width:300px;
+	border:0;
+	background:#CCC;
+	
+	
+	
+	
+	
+}
+
+#subTable{
+	width:100%;
+	background:#fff;
+	
+}
 
 input:focus, input:hover {
 				background-color: #ffffff;
@@ -22,7 +42,8 @@ input[type=password]
 	border-radius: 5px;
 	display: block;
 	margin-bottom: 10px;
-	width: 287px;
+	min-width: 287px;
+	width:100%;
 }
 input[type=submit]
 {
@@ -49,4 +70,23 @@ td#password
 }
 strong{
 	font-size: large;
+}
+
+
+@media only screen and (max-width: 800px) {
+	
+	img{
+		text-align:none;
+		margin:0;
+		width:100%;
+		
+		
+	}
+	
+	#mainTable{width:100%;}
+	
+	
+	
+	
+	
 }
