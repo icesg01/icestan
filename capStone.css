@@ -1,4 +1,4 @@
-Sbody,html{
+body,html{
 	margin:0;
 	position:relative;
 	height:100%;
@@ -6,7 +6,7 @@ Sbody,html{
 	#container{
 	height:100%;
 	float:left;
-width:100%;
+	width:100%;
 
 	
 	
@@ -62,9 +62,9 @@ height:25%;
 	background:#fff;
 	width:calc(70% - 2px);
 	width:68%;
-	  -moz-box-shadow:    3px 3px 5px 6px #ccc;
-  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-  box-shadow:         3px 3px 5px 6px #ccc;
+	 -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  	-webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  	box-shadow:         3px 3px 5px 6px #ccc;
 	
 	
 	
