@@ -25,7 +25,7 @@ if(!isset($_SESSION['username'])){
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1", user-scalable=0/>
 		<script src="timeSlot.js"></script>
 		<script src="checkTime.js"></script>
-		
+		<script src="remove.js"></script>
 		<script>
 			document.createElement('section');
 			document.createElement('nav');
@@ -33,7 +33,7 @@ if(!isset($_SESSION['username'])){
 	
 </head>
 
-<body onload="checkTime(0);">
+<body onload="checkTime(0,'<?php echo $sessionName ?>');">
 	
 	<div id = "picture">
 	<image src = "https://s-media-cache-ak0.pinimg.com/originals/1c/e7/71/1ce77139b73ccc7574e6d86763f0d0d5.jpg" 
