@@ -55,10 +55,13 @@ $displayString = "";
 
 while($row = $job->fetch(PDO::FETCH_BOTH)){
 
+$displayString .= "<h2 style=\"color:{$teamColor}; margin:0; padding:0; margin-top:5%; float:left;\">{$teamName}</h2>";
+$addBOx = "<img onclick=\"remove('$id')\"  style=\" margin-top:10%;\" src=\"xButton.jpg\" />  ";
 
-$displayString .= "<h2 style=\"color:{$teamColor}; margin:0; padding:0;\">{$teamName}</h2>";
-
-
+//if($teamName == $row['username'])
+//{
+	$displayString .= $addBOx;
+//}
 
 
 }

@@ -10,35 +10,24 @@
 	</head>
 
 	<body>
+		<div id="encloseImage">
 		<img src="https://s-media-cache-ak0.pinimg.com/originals/1c/e7/71/1ce77139b73ccc7574e6d86763f0d0d5.jpg" style="text-align: center" />
-		<div id="centerpage" >
-			<table id="mainTable" border="0" align="center" cellpadding="0" cellspacing="1" >
-				<tr>
-					<form name="form1" method="post" action="login.php">
-					<td>
-						<table id="subTable"  border="0" cellpadding="3" cellspacing="1" >
-						<tr>
-							<td colspan="3" style="text-align: center"><strong>Member Login </strong></td>
-						</tr>
-						<tr>
-							<td id="username" width="78">Username</td>
-						</tr>
-						<tr>
-							<td width="294"><input name="username" type="text" id="username"></td>
-						</tr>
-						<tr>
-							<td id="password" >Password</td>
-						</tr>
-						<tr>
-							<td><input name="password" type="password" id="password"></td>
-						</tr>
-						<tr style="text-align: center">
-							<td><input type="submit" name="Submit" value="Login"></td>
-						</tr>
-						</table>
-					</td>
-					</form>
-				</tr>
-			</table>
+		</div>
+		
+		<div id="title">
+		<label >IPFW Computer Science Capstone Team Login</label>
+		</div>
+		
+		<div id="mainContent">
+			<form name="Login" id="login" method="post" action="login.php">
+					
+				<label id="user" >Username</label>
+				<input name="username" type="text" id="username">
+				
+				<label id="pass" >Password</label>
+				<input name="password" type="password" id="password">
+	
+				<input name="submit"   type="submit" id="submit" value="Login">
+			</form>
 		</div>
 	</body>

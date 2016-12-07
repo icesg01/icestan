@@ -5,88 +5,77 @@ body{
 	background: linear-gradient(to bottom, rgba(53,106,160,1) 0%,rgba(53,106,160,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
-img{
+form#login{
+    /*border: 3px solid #f1f1f1;*/
+	padding: 10px 10px 10px 10px;
 	
-	text-align:center;
-	display:block;
-	width:30%;
-	min-width:300px;
-	margin:auto;
 }
+div#title
+{
+	margin: auto;
+	text-align: center;
+	background-color: white;
+	width: 500px;
+	display: block;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	
-#mainTable{
-	width:30%;
-	min-width:300px;
-	border:0;
-	background:#CCC;
-	
-	
-	
-	
-	
+	font-family: "Courier New", Courier, monospace;
+	color: rgb(53,106,160);
+	font-weight: bold;
+	font-size: 20px;
 }
 
-#subTable{
-	width:100%;
-	background:#fff;
-	
+input#username, input#password {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    box-sizing: border-box;
+	border: 1px solid #bdbdbd;
+	border-radius: 5px;
 }
 
 input:focus, input:hover {
 				background-color: #ffffff;
 				border: 1px solid rgb(53,106,160);}
-input[type=text],
-input[type=password]
-{
-	border: 1px solid #bdbdbd;
-	border-radius: 5px;
-	display: block;
-	margin-bottom: 10px;
-	min-width: 287px;
-	width:100%;
-}
-input[type=submit]
-{
-	background: rgb(53,106,160); /* Old browsers */
-	background: -moz-linear-gradient(top, rgba(53,106,160,1) 0%, rgba(53,106,160,1) 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, rgba(53,106,160,1) 0%,rgba(53,106,160,1) 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, rgba(53,106,160,1) 0%,rgba(53,106,160,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	color: white;
+
+input#submit{
+    background: rgb(53,106,160);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+	display: inline-block;
+	font-family: "Courier New", Courier, monospace;
+		color: white;
 					border: 1px solid #bdbdbd;
 				border-radius: 5px;
-	width: 80px;
-	height: 30px;
-	font-family: "Courier New", Courier, monospace;
+}
+
+img{
+	width: 500px;
+	height: 400px;
+	display: block;
+	margin: auto;
 
 }
-strong,
-td#username,
-td#password
-{
+
+div#encloseImage{
+	text-align: center;
+}
+label#user, label#pass{
+	display: block;
 	font-family: "Courier New", Courier, monospace;
 	color: rgb(53,106,160);
 	font-weight: bold;
-	padding-bottom: 0px;
-}
-strong{
-	font-size: large;
+	font-size: 17px;
 }
 
-
-@media only screen and (max-width: 800px) {
-	
-	img{
-		text-align:none;
-		margin:0;
-		width:100%;
-		
-		
-	}
-	
-	#mainTable{width:100%;}
-	
-	
-	
-	
-	
+div#mainContent {
+	background-color: white;
+	width: 500px;
+	margin: auto;
 }

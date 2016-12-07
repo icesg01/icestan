@@ -5,7 +5,7 @@ $sessionName = $_SESSION['username'];
 $teamColor = $_SESSION['teamColor'];
 if(!isset($_SESSION['username'])){
 	
-	header('Location: http://www.sullens.net/~sice/cins257/ProjectTest/logme.php');
+	header('Location: logme.php');
 	
 	
 }
@@ -34,7 +34,13 @@ if(!isset($_SESSION['username'])){
 </head>
 
 <body onload="checkTime(0,'<?php echo $sessionName ?>');">
-	
+
+	<div id="right">
+		<form action="logout.php">
+			<input type="submit" value="Logout" id="logout"/>
+		</form>
+	</div>
+
 	<div id = "picture">
 	<image src = "https://s-media-cache-ak0.pinimg.com/originals/1c/e7/71/1ce77139b73ccc7574e6d86763f0d0d5.jpg" 
 	style="height:250px;"></image>
